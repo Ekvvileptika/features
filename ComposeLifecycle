@@ -1,4 +1,5 @@
 val lifecycleState by lifecycleOwner.lifecycle.currentStateFlow.collectAsState()
+val lifecycleOwner = LocalLifecycleOwner.current
 
 LaunchedEffect(lifecycleState) {
         when(lifecycleState) {
